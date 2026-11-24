@@ -1,0 +1,88 @@
+/*
+ * Quotes Text: values measured on about.att.com story quote rows.
+ * Desktop: 817px row; 209px mark column (189 x 149 quote mark + 20px gap);
+ * 607px text, 21px / 1.6. Mobile: wide quote mark above the text, 18px.
+ */
+.quotes-text {
+  margin: 40px 0;
+}
+
+.quotes-text .quotes-text-item + .quotes-text-item {
+  margin-top: 40px;
+}
+
+.quotes-text .quotes-text-mark {
+  margin-bottom: 20px;
+}
+
+.quotes-text .quotes-text-mark picture,
+.quotes-text .quotes-text-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* the quote text carries its own quotation marks: no site blockquote
+   decoration (generated curly quotes, italic, hanging indent) */
+.quotes-text .quotes-text-quote {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  text-indent: 0;
+  hanging-punctuation: none;
+}
+
+.quotes-text .quotes-text-quote p::before,
+.quotes-text .quotes-text-quote p::after {
+  content: none;
+}
+
+.quotes-text .quotes-text-quote p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.quotes-text .quotes-text-quote p:last-child {
+  margin-bottom: 0;
+}
+
+.quotes-text .quotes-text-quote a:any-link {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@media (min-width: 600px) {
+  .quotes-text .quotes-text-item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* mark column: a quarter of the row plus its share of the gutter
+     (209px of an 817px row: 189px quote mark + 20px gap) */
+  .quotes-text .quotes-text-mark {
+    flex: 0 0 calc((100% + 20px) / 4);
+    box-sizing: border-box;
+    margin-bottom: 0;
+    padding-right: 20px;
+  }
+
+  .quotes-text .quotes-text-quote {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .quotes-text {
+    margin: 60px 0;
+  }
+
+  .quotes-text .quotes-text-item + .quotes-text-item {
+    margin-top: 60px;
+  }
+
+  .quotes-text .quotes-text-quote p {
+    font-size: 21px;
+  }
+}

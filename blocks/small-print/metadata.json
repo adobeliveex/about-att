@@ -1,0 +1,26 @@
+{
+  "variantName": "small-print",
+  "baseBlock": "small-print",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "stylingNotes": "Plain left-aligned text, 15px / 27px, 20px between paragraphs; links in the body link colour.",
+    "purpose": "Visible small print at the foot of a story",
+    "description": "Footnotes, non-GAAP disclaimers and company boilerplate in small type"
+  },
+  "contentPattern": {
+    "summary": "Source .article__content .text.text--footer components (always-visible small print).",
+    "structure": "One cell of rich text"
+  },
+  "options": [],
+  "memberVariantIds": ["small-print"],
+  "usage": {
+    "description": "Earnings footnotes, Ookla footnotes, About AT&T / partner boilerplate.",
+    "pagesUsing": [
+      "/story/2026/3q-earnings",
+      "/story/2026/att-to-sell-att-mexico",
+      "/story/2026/forged-fiber-37-gigapower-joint-venture",
+      "/story/2026/jv-help-end-dead-zones"
+    ]
+  }
+}

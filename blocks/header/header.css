@@ -1,0 +1,448 @@
+/*
+ * Header: AT&T Newsroom fixed black bar.
+ * Values measured from https://about.att.com/ (see migration-work/navigation-validation/).
+ * Mobile-first: base = small screens, @media (min-width: 900px) = desktop bar with hover dropdowns.
+ */
+
+/* the fixed black bar is the header block itself (source: .att-about-header__wrap) */
+header .header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  box-sizing: border-box;
+  height: var(--nav-height);
+  background-color: #000;
+  border-bottom: 1px solid #5a5a5a;
+}
+
+header .nav-wrapper {
+  height: 100%;
+}
+
+/* "skip to main content": hidden (but focusable) until a keyboard user tabs to it */
+header .skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 3;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--link-color);
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+header .skip-link:not(:focus-visible) {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+header .skip-link:focus-visible {
+  outline: 2px solid var(--brand-cyan);
+  outline-offset: 2px;
+}
+
+/* content box: 1220px max, centred, with a minimum side gutter (source: nav max-width 1220px; margin auto) */
+header nav {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(var(--content-width), 100% - 2 * var(--content-gutter));
+  height: 72px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: arial, helvetica, sans-serif;
+  line-height: 16px;
+}
+
+/* brand */
+header .nav-brand {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+header .nav-brand p {
+  margin: 0;
+}
+
+header .nav-brand .nav-brand-link {
+  display: block;
+  line-height: 0;
+}
+
+header .nav-brand img {
+  display: block;
+  width: 95px;
+  height: 38px;
+  object-fit: contain;
+}
+
+/* hamburger (mobile): three 3px bars, morphs into an X when open */
+header .nav-hamburger {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 2px 0 0;
+  border: 0;
+  background: transparent;
+  line-height: normal;
+  cursor: pointer;
+}
+
+header .nav-hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 0 0 4px;
+  background-color: #fff;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+header nav.is-menu-open .nav-hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+header nav.is-menu-open .nav-hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+header nav.is-menu-open .nav-hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+header .nav-hamburger:focus-visible {
+  outline: 2px solid var(--brand-cyan);
+  outline-offset: 4px;
+}
+
+/* push drawer: logo/X and the page move 320px left while the drawer slides in from the right (no backdrop) */
+header nav > .nav-brand,
+/* stylelint-disable-next-line no-descending-specificity -- intentional cascade order */
+header nav > .nav-hamburger,
+body > main,
+body > footer {
+  transition: transform 0.3s;
+}
+
+header nav.is-menu-open > .nav-brand,
+header nav.is-menu-open > .nav-hamburger,
+body.nav-menu-open > main,
+body.nav-menu-open > footer {
+  transform: translateX(-320px);
+}
+
+body.nav-menu-open {
+  overflow: hidden;
+}
+
+/* navigation drawer (mobile) */
+header .nav-sections {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 320px;
+  max-width: 100%;
+  padding-top: 72px;
+  overflow-y: auto;
+  border-left: 1px solid #5a5a5a;
+  background-color: #000;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: transform 0.3s, visibility 0.3s;
+}
+
+header nav.is-menu-open .nav-sections {
+  visibility: visible;
+  transform: none;
+}
+
+header .nav-list,
+header .nav-dropdown {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header .nav-item {
+  position: relative;
+  border-bottom: 1px solid #5a5a5a;
+}
+
+header .nav-list .nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0 10px 20px;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+header .nav-list .nav-link:hover,
+header .nav-list .nav-link:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* expanded section: label gets a cyan underline */
+header .nav-item.is-open > .nav-link {
+  padding-bottom: 21px;
+}
+
+header .nav-item.is-open > .nav-link::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 20px;
+  height: 2px;
+  background-color: var(--brand-cyan);
+}
+
+/* "+" / "-" expand button */
+header .nav-dropdown-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+header .nav-dropdown-toggle::before,
+header .nav-dropdown-toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+header .nav-dropdown-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+header .nav-item.is-open > .nav-dropdown-toggle::after {
+  display: none;
+}
+
+header .nav-dropdown {
+  display: none;
+  padding: 0 0 0 40px;
+}
+
+header .nav-item.is-open > .nav-dropdown {
+  display: block;
+}
+
+header .nav-dropdown .nav-dropdown-item {
+  border-bottom: 1px solid #5a5a5a;
+}
+
+header .nav-dropdown .nav-dropdown-item:last-child {
+  border-bottom: 0;
+}
+
+header .nav-dropdown .nav-dropdown-item a {
+  display: block;
+  padding: 10px 20px 10px 0;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+header .nav-dropdown .nav-dropdown-item a:hover,
+header .nav-dropdown .nav-dropdown-item a:focus-visible {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity -- intentional cascade order */
+header .nav-list a:focus-visible,
+header .nav-dropdown-toggle:focus-visible {
+  outline: 2px solid var(--brand-cyan);
+  outline-offset: -2px;
+}
+
+header .nav-tools {
+  display: none;
+}
+
+/* desktop: single 104px bar, logo left, uppercase items right, hover dropdowns */
+@media (min-width: 900px) {
+  header .nav-hamburger {
+    display: none;
+  }
+
+  header nav {
+    height: 104px;
+  }
+
+  header nav > .nav-brand,
+  header nav > .nav-hamburger,
+  header nav.is-menu-open > .nav-brand,
+  body > main,
+  body > footer,
+  body.nav-menu-open > main,
+  body.nav-menu-open > footer {
+    transform: none;
+    transition: none;
+  }
+
+  header .nav-sections,
+  header nav.is-menu-open .nav-sections {
+    position: static;
+    display: block;
+    width: auto;
+    height: 100%;
+    padding: 0;
+    overflow: visible;
+    border-left: 0;
+    background: none;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  header .nav-list {
+    display: flex;
+    align-items: stretch;
+    gap: 70px;
+    height: 100%;
+  }
+
+  header .nav-item {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 0;
+  }
+
+  header .nav-list .nav-link,
+  header .nav-item.is-open > .nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.5px;
+    text-transform: uppercase;
+  }
+
+  header .nav-item.is-open > .nav-link::after {
+    content: none;
+  }
+
+  /* 5px cyan bar on the header's bottom edge under the active item */
+  header .nav-list .nav-link::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    height: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+  }
+
+  header .nav-item:hover > .nav-link::before,
+  header .nav-item.is-open > .nav-link::before {
+    background-color: var(--brand-cyan);
+  }
+
+  /* sub-menu toggle stays available to keyboard / screen readers only */
+  header .nav-dropdown-toggle::before,
+  header .nav-dropdown-toggle::after {
+    content: none;
+  }
+
+  header .nav-dropdown-toggle {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  header .nav-dropdown-toggle:focus-visible {
+    width: 16px;
+    height: 16px;
+    clip-path: none;
+    outline: 2px solid var(--brand-cyan);
+  }
+
+  header .nav-dropdown,
+  header .nav-item.is-open > .nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: clamp(260px, 23.6vw, 340px);
+    margin-top: 1px;
+    padding: 10px 0;
+    background-color: #000;
+    animation: none;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity -- intentional cascade order */
+  header .nav-dropdown {
+    display: none;
+  }
+
+  header .nav-item.is-open > .nav-dropdown {
+    display: block;
+  }
+
+  header .nav-item.align-right > .nav-dropdown {
+    right: 0;
+    left: auto;
+  }
+
+  header .nav-dropdown .nav-dropdown-item,
+  header .nav-dropdown .nav-dropdown-item:last-child {
+    border-bottom: 0;
+  }
+
+  header .nav-dropdown .nav-dropdown-item a {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 17.5px;
+  }
+
+  header .nav-dropdown .nav-dropdown-item a:hover,
+  header .nav-dropdown .nav-dropdown-item a:focus-visible {
+    background-color: #5a5a5a;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .nav-list {
+    gap: 84.5px;
+  }
+}

@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://about.att.com/"
+      ],
+      "representativeUrl": "https://about.att.com/",
+      "description": "AT&T newsroom home page: earnings hero banner, stock ticker, subscribe and newsroom search bar, latest news story cards",
+      "urlPattern": "/",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            ".snr-banner .banner",
+            "#page > div.SNR_section.section:nth-of-type(1) .banner"
+          ]
+        },
+        {
+          "name": "columns-stock-ticker",
+          "instances": [
+            ".SNR_Stock_Ticker .stock-ticker",
+            ".stock-ticker"
+          ]
+        },
+        {
+          "name": "search-newsroom",
+          "instances": [
+            ".search-widget--shortened",
+            "#newsroom-search-widget"
+          ]
+        },
+        {
+          "name": "cards-news",
+          "instances": [
+            ".featurestorymultifield .featured-stories",
+            ".featured-stories"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero banner",
+          "selector": [
+            ".region.banner-button",
+            "#page > div.SNR_section.section:nth-of-type(1)"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Stock ticker",
+          "selector": [
+            ".region--gray",
+            "#page > div.SNR_section.section:nth-of-type(2)"
+          ],
+          "style": "light-grey-gradient",
+          "blocks": [
+            "columns-stock-ticker"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Subscribe and search bar",
+          "selector": [
+            ".custom-featured-items .region__wrap > div.SNR_column.section"
+          ],
+          "style": "split",
+          "blocks": [
+            "search-newsroom"
+          ],
+          "defaultContent": [
+            ".custom-featured-items .SNR_column .col-6:first-child .cta--button"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Latest news",
+          "selector": [
+            ".custom-featured-items .region__wrap > div.text.section:has(h2)",
+            ".custom-featured-items .region__wrap > div.text.section:nth-of-type(5)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-news"
+          ],
+          "defaultContent": [
+            ".custom-featured-items .text__wrap h2",
+            ".custom-featured-items .featureditem .featured-item--alternate .cta--button"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "story",
+      "urls": [
+        "https://about.att.com/story/2026/samsung-holiday.html",
+        "https://about.att.com/story/2026/att-amdocs-expand-collaboration.html",
+        "https://about.att.com/story/2026/att-ast-spacemobile-engineering-connected-world.html",
+        "https://about.att.com/story/2026/screenready-advisory-board.html",
+        "https://about.att.com/story/2026/jv-help-end-dead-zones.html",
+        "https://about.att.com/story/2026/forged-fiber-37-gigapower-joint-venture.html",
+        "https://about.att.com/story/2026/att-to-sell-att-mexico.html",
+        "https://about.att.com/story/2026/3q-earnings.html",
+        "https://about.att.com/story/2026/holiday-small-business.html",
+        "https://about.att.com/story/2026/flexible-sim.html",
+        "https://about.att.com/story/2026/apple-holiday.html",
+        "https://about.att.com/story/2026/kids-holiday.html"
+      ],
+      "representativeUrl": "https://about.att.com/story/2026/samsung-holiday.html",
+      "description": "AT&T newsroom story / press release article pages",
+      "blocks": [
+        {
+          "name": "columns-share-bar",
+          "instances": [
+            ".article__header .article-header--row"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            ".article__content .expand-collapse"
+          ]
+        },
+        {
+          "name": "accordion-expand-text",
+          "instances": [
+            ".article__content .text.expandable-text"
+          ]
+        },
+        {
+          "name": "small-print",
+          "instances": [
+            ".article__content .text.text--footer"
+          ]
+        },
+        {
+          "name": "quotes-text",
+          "instances": [
+            ".article__content .SNR_column"
+          ]
+        },
+        {
+          "name": "embed",
+          "instances": [
+            ".article__content .media[data-type=\"video\"]"
+          ]
+        },
+        {
+          "name": "related-stories",
+          "instances": [
+            ".story__related .row__wrap",
+            ".story__related .region--blue"
+          ]
+        }
+      ],
+      "urlPattern": "/story/*",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Article",
+          "selector": [
+            "main > .story__wrap",
+            "#page > div.story__wrap"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-share-bar",
+            "accordion-faq",
+            "accordion-expand-text",
+            "embed",
+            "small-print",
+            "quotes-text"
+          ],
+          "defaultContent": [
+            ".article__header .story--pub-date",
+            ".article__header .story--title",
+            ".article__header .story--description",
+            ".article__content .text"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Related stories",
+          "selector": [
+            "main > .story__related",
+            "#page > div.story__related"
+          ],
+          "style": "blue",
+          "blocks": [
+            "related-stories"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "allnews",
+      "urls": [
+        "https://about.att.com/allnews.html"
+      ],
+      "representativeUrl": "https://about.att.com/allnews.html",
+      "description": "Newsroom All News search / listing page",
+      "urlPattern": "/allnews.html",
+      "blocks": [
+        {
+          "name": "article-search",
+          "instances": [
+            "main#page > .region"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Article search",
+          "selector": [
+            "main#page > .region"
+          ],
+          "style": null,
+          "blocks": [
+            "article-search"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

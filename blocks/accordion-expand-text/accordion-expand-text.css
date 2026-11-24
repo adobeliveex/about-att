@@ -1,0 +1,57 @@
+/* Accordion Expand Text: structural styles. Visual design comes in the design pass. */
+.accordion-expand-text {
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+}
+
+.accordion-expand-text .accordion-expand-text-item {
+  margin: 0 0 16px;
+}
+
+.accordion-expand-text .accordion-expand-text-toggle {
+  display: inline-block;
+  line-height: 23px;
+  cursor: pointer;
+}
+
+.accordion-expand-text .accordion-expand-text-toggle:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+.accordion-expand-text .accordion-expand-text-body {
+  padding: 8px 0 0;
+}
+
+.accordion-expand-text .accordion-expand-text-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion-expand-text .accordion-expand-text-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* option: text-link-toggle - summary looks like a plain text link, no marker */
+.accordion-expand-text.text-link-toggle .accordion-expand-text-toggle {
+  list-style: none;
+  color: var(--link-color);
+  font-weight: 400;
+}
+
+.accordion-expand-text.text-link-toggle .accordion-expand-text-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-expand-text.text-link-toggle .accordion-expand-text-toggle:hover {
+  text-decoration: underline;
+}
+
+/* option: small-print - reduced type for footnotes and boilerplate (source: 15px / 27px) */
+.accordion-expand-text.small-print {
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.accordion-expand-text.small-print .accordion-expand-text-body p {
+  margin: 0 0 20px;
+}

@@ -1,0 +1,25 @@
+{
+  "variantName": "related-stories",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#009fdb",
+    "stylingNotes": "Three white story cards on the AT&T blue band: image (768:575), 20px/25px regular title, 16px description, bold blue Read More link; image darkens on hover.",
+    "purpose": "Automatically populated related story cards",
+    "description": "Auto-populated 3-up related story cards from the stories index"
+  },
+  "contentPattern": {
+    "summary": "Dynamic list of related stories built from the stories query index; no authored cards.",
+    "structure": "Empty block table, optional key/value rows: limit (default 3), source (default /story/query-index.json)"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "related-stories"
+  ],
+  "usage": {
+    "description": "Related stories band at the bottom of newsroom story pages.",
+    "pagesUsing": [
+      "/story/2026/samsung-holiday"
+    ]
+  }
+}

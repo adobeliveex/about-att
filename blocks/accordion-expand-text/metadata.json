@@ -1,0 +1,40 @@
+{
+  "variantName": "accordion-expand-text",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "backgroundImage": null,
+    "stylingNotes": "Footer of the story body: small blue bold text links 'Disclaimers' and 'View more', each hiding small-print text (numbered footnotes; 'About AT&T' boilerplate). No rows, borders or chevrons.",
+    "sectionSelector": "#page > div.story__wrap",
+    "purpose": "Small-print text collapsed behind a plain text-link toggle",
+    "description": "Text-link toggles ('Disclaimers', 'View more') revealing small-print content"
+  },
+  "contentPattern": {
+    "summary": "Interactive collapsible text: content hidden behind a text toggle link. Two items: 'Disclaimers' (footnotes) and 'View more' (About AT&T). Different look from the FAQ (small text, plain text-link toggle, no chevron rows).",
+    "structure": "one row per collapsible section with two cells: cell 1 the toggle label as plain text (e.g. 'Disclaimers', 'View more'), cell 2 the hidden content (paragraphs, footnotes with superscript numbers, links)"
+  },
+  "options": [
+    {
+      "class": "text-link-toggle",
+      "label": "Text Link Toggle"
+    },
+    {
+      "class": "small-print",
+      "label": "Small Print"
+    }
+  ],
+  "memberVariantIds": [
+    "accordion-expand-text"
+  ],
+  "usage": {
+    "description": "Disclaimers (footnotes) and About AT&T boilerplate at the end of newsroom story pages.",
+    "pagesUsing": [
+      "/story/2026/samsung-holiday"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-11T00:00:00.000Z"
+  },
+  "reuseGuidance": "Use for footnotes, disclaimers and boilerplate behind a text toggle. For Q&A lists use accordion-faq.",
+  "sourceUrl": "https://about.att.com/story/2026/samsung-holiday.html"
+}

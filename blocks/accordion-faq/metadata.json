@@ -1,0 +1,40 @@
+{
+  "variantName": "accordion-faq",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "backgroundImage": null,
+    "stylingNotes": "FAQ list under a 'Frequently Asked Questions' H2: question rows separated by thin grey rules, chevron toggle at the right edge, collapsed by default; answers are rich text (paragraphs, lists, links, footnote superscripts).",
+    "sectionSelector": "#page > div.story__wrap",
+    "purpose": "Expand/collapse FAQ list of questions and rich answers",
+    "description": "Question rows with grey dividers and right-aligned chevrons; rich answers"
+  },
+  "contentPattern": {
+    "summary": "Interactive expand/collapse FAQ: one row per question (title cell) and answer (content cell).",
+    "structure": "one row per question with two cells: cell 1 the question text, cell 2 the answer (paragraphs, lists, links). The FAQ heading stays default content above the block"
+  },
+  "options": [
+    {
+      "class": "chevron",
+      "label": "Chevron"
+    },
+    {
+      "class": "divider-rows",
+      "label": "Divider Rows"
+    }
+  ],
+  "memberVariantIds": [
+    "accordion-faq"
+  ],
+  "usage": {
+    "description": "Frequently Asked Questions list on newsroom story pages (5 questions on samsung-holiday).",
+    "pagesUsing": [
+      "/story/2026/samsung-holiday"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-11T00:00:00.000Z"
+  },
+  "reuseGuidance": "Use for question/answer lists. For small-print text behind a text link use accordion-expand-text.",
+  "sourceUrl": "https://about.att.com/story/2026/samsung-holiday.html"
+}

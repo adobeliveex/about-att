@@ -1,0 +1,141 @@
+/* Columns Share Bar: structural layout. Visual design comes in the design pass. */
+.columns-share-bar {
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+}
+
+.columns-share-bar .columns-share-bar-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px 0;
+  border-top: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.columns-share-bar .columns-share-bar-cell > p {
+  margin: 0;
+}
+
+/* share label + links */
+.columns-share-bar .columns-share-bar-share {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.columns-share-bar .columns-share-bar-label {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+}
+
+.columns-share-bar .columns-share-bar-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columns-share-bar .columns-share-bar-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  min-height: 24px;
+  color: var(--text-color);
+}
+
+.columns-share-bar .columns-share-bar-links a:hover,
+.columns-share-bar .columns-share-bar-links a:focus-visible {
+  color: var(--link-color);
+}
+
+.columns-share-bar .columns-share-bar-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* download-assets dropdown (native details disclosure) */
+.columns-share-bar .columns-share-bar-dropdown {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+}
+
+.columns-share-bar .columns-share-bar-dropdown summary {
+  position: relative;
+  padding: 6px 32px 6px 12px;
+  border: 1px solid var(--border-grey);
+  font-size: var(--body-font-size-s);
+  cursor: pointer;
+  list-style: none;
+}
+
+.columns-share-bar .columns-share-bar-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.columns-share-bar .columns-share-bar-dropdown summary::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 6px;
+  height: 6px;
+  border: solid currentcolor;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-75%) rotate(45deg);
+}
+
+.columns-share-bar .columns-share-bar-dropdown[open] summary::after {
+  transform: translateY(-25%) rotate(-135deg);
+}
+
+.columns-share-bar .columns-share-bar-menu {
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 4px 0;
+  border: 1px solid var(--border-grey);
+  border-top: 0;
+  background-color: var(--background-color);
+  list-style: none;
+}
+
+.columns-share-bar .columns-share-bar-menu-link {
+  display: block;
+  padding: 6px 12px;
+  font-size: var(--body-font-size-s);
+}
+
+/* subscribe button */
+.columns-share-bar .columns-share-bar-cta .button-wrapper {
+  margin: 0;
+}
+
+@media (min-width: 900px) {
+  .columns-share-bar .columns-share-bar-row {
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .columns-share-bar.three-cells .columns-share-bar-cell {
+    flex: 1 1 0;
+  }
+
+  .columns-share-bar.three-cells .columns-share-bar-downloads {
+    display: flex;
+    justify-content: center;
+  }
+
+  .columns-share-bar.three-cells .columns-share-bar-cta {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

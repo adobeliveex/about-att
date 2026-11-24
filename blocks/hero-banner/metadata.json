@@ -1,0 +1,33 @@
+{
+  "variantName": "hero-banner",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "backgroundImage": null,
+    "stylingNotes": "Full-width blue banner image with left-aligned white headline and pill CTA overlaid; photo background belongs to the hero block, so the section is not colored. visual-trees hint was default-content but the banner image + overlay text is a hero.",
+    "sectionSelector": "#page > div.SNR_section.section:nth-of-type(1)",
+    "purpose": "Page-leading banner: full-bleed image with the main headline and a CTA overlaid",
+    "description": "Full-width banner image with left-aligned headline and pill CTA overlaid"
+  },
+  "contentPattern": {
+    "summary": "Text overlaid on a full-bleed banner image is a hero; the photo background belongs to the block (section not colored). Banner text is the page's main headline, authored as h1.",
+    "structure": "row 1: background image; row 2: h1 headline, optional text, and a standalone link (rendered as a button)"
+  },
+  "options": [
+    {
+      "class": "image-background",
+      "label": "Image Background"
+    },
+    {
+      "class": "text-left",
+      "label": "Text Left"
+    }
+  ],
+  "memberVariantIds": [
+    "hero-banner"
+  ],
+  "usage": "Top of a page to feature one announcement (e.g. earnings) with a single CTA.",
+  "reuseGuidance": "Use for any full-width image banner with overlaid headline + CTA. Use the base hero for a simple centered hero.",
+  "sourceUrl": "https://about.att.com/"
+}

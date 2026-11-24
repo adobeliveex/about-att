@@ -1,0 +1,31 @@
+/* Small Print: values measured on about.att.com story .text--footer (15px / 27px) */
+.small-print .small-print-content {
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.small-print .small-print-content p,
+.small-print .small-print-content li {
+  margin: 0 0 20px;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.small-print .small-print-content ul,
+.small-print .small-print-content ol {
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+
+.small-print .small-print-content > :last-child {
+  margin-bottom: 0;
+}
+
+.small-print .small-print-content sup {
+  font-size: 0.7em;
+  line-height: 0;
+}
+
+.small-print .small-print-content a:any-link {
+  font-weight: inherit;
+}

@@ -1,0 +1,96 @@
+/*
+ * Related stories: auto-populated story cards. Card styling matches the
+ * about.att.com related-stories band (white card panels on the blue section).
+ */
+.related-stories ul {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related-stories .related-stories-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.related-stories .related-stories-card-image a {
+  display: block;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.related-stories .related-stories-card-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 768 / 575;
+  object-fit: cover;
+  transition: filter 0.5s;
+}
+
+.related-stories .related-stories-card:hover .related-stories-card-image img {
+  filter: brightness(0.4);
+}
+
+.related-stories .related-stories-card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.related-stories .related-stories-card-body h3 {
+  margin: 0;
+  font-family: var(--heading-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.related-stories .related-stories-card-body h3 a:any-link {
+  color: var(--text-color);
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.related-stories .related-stories-card-body h3 a:hover {
+  text-decoration: underline;
+}
+
+.related-stories .related-stories-card-description {
+  margin: 10px 0 0;
+  font-size: 16px;
+  line-height: 23.2px;
+}
+
+.related-stories .related-stories-card-cta-container {
+  margin: 20px 0 0;
+}
+
+.related-stories a.related-stories-card-cta:any-link {
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.related-stories a.related-stories-card-cta:hover,
+.related-stories a.related-stories-card-cta:focus-visible {
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  .related-stories ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .related-stories .related-stories-card-image img {
+    transition: none;
+  }
+}

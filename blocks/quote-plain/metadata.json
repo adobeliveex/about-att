@@ -1,0 +1,36 @@
+{
+  "variantName": "quote-plain",
+  "baseBlock": "quote",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "backgroundImage": null,
+    "stylingNotes": "Looks like a body paragraph: no quote mark graphic, border or portrait. The speaker's name and title are bold and sit inline in the quote text ('said Sarah Day, vice president, ...').",
+    "sectionSelector": "#page > div.story__wrap",
+    "purpose": "Pull quote in body-text style with the attribution inline",
+    "description": "Plain quotation paragraph with an inline bold attribution"
+  },
+  "contentPattern": {
+    "summary": "A quotation outside an interactive component is a quote block; the inline attribution (said Sarah Day, ...) belongs to it. The preceding H2 stays default content.",
+    "structure": "row 1, one cell: the quotation paragraph(s), which may already include the inline attribution with the speaker in bold. Row 2 (optional), one cell: a separate attribution; with inline-attribution it is appended to the end of the last quotation paragraph"
+  },
+  "options": [
+    {
+      "class": "inline-attribution",
+      "label": "Inline Attribution"
+    }
+  ],
+  "memberVariantIds": [
+    "quote-plain"
+  ],
+  "usage": {
+    "description": "Executive quote in newsroom story bodies ('What our experts are saying').",
+    "pagesUsing": [
+      "/story/2026/samsung-holiday"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-11T00:00:00.000Z"
+  },
+  "reuseGuidance": "Use for story quotes that read as body text. Use the base quote for a styled pull quote.",
+  "sourceUrl": "https://about.att.com/story/2026/samsung-holiday.html"
+}

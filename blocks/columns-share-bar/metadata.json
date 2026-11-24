@@ -1,0 +1,44 @@
+{
+  "variantName": "columns-share-bar",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "backgroundImage": null,
+    "stylingNotes": "Article utility row under the story header: 'Share' label with X/Facebook/LinkedIn/email icons, a 'Download assets' select-style dropdown, and a blue pill 'Subscribe to AT&T News' button, in one row between thin grey rules. Stacks on mobile.",
+    "sectionSelector": "#page > div.story__wrap",
+    "purpose": "Article utility row with share links, a download-assets dropdown and a subscribe button",
+    "description": "One row, three cells: share icons | download dropdown | subscribe pill button"
+  },
+  "contentPattern": {
+    "summary": "Fixed set of three different items side by side in one row that never wraps (share icons, download-assets dropdown, subscribe button); share links and the dropdown are interactive and the block builds share URLs from the page URL.",
+    "structure": "one row with three cells: cell 1 the label 'Share' and a list of share links or network names (X, Facebook, LinkedIn, Email); the block rebuilds each share URL from the current page URL and title. Cell 2 the dropdown label (e.g. 'Download assets') as a paragraph followed by a list of download links (e.g. 'Download release (PDF)'). Cell 3 a single link (e.g. 'Subscribe to AT&T News'), rendered as a button"
+  },
+  "options": [
+    {
+      "class": "three-cells",
+      "label": "Three Cells"
+    },
+    {
+      "class": "share-icons",
+      "label": "Share Icons"
+    },
+    {
+      "class": "dropdown",
+      "label": "Dropdown"
+    }
+  ],
+  "memberVariantIds": [
+    "columns-share-bar"
+  ],
+  "usage": {
+    "description": "Share/download/subscribe utility row under the headline of newsroom story pages.",
+    "pagesUsing": [
+      "/story/2026/samsung-holiday"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-11T00:00:00.000Z"
+  },
+  "reuseGuidance": "Use for the story-page share/download/subscribe row. For general side-by-side content use columns.",
+  "sourceUrl": "https://about.att.com/story/2026/samsung-holiday.html"
+}

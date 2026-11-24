@@ -1,0 +1,26 @@
+{
+  "variantName": "offer-banner",
+  "baseBlock": "offer-banner",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#f2fafd",
+    "stylingNotes": "Rounded 16px light-blue panel, centred text. Heading 48px (32px mobile) bold black with superscript SM; description 18px (16px) #1d2329; legal 12px (11px) #454b52 with underlined link; outline pill CTA 48px high, 2px #00388f border, 28px radius, 14px bold. Image banner: photo covers a 500px-high rounded panel (object-fit cover), text left max 595px, white text, eyebrow 26px (22px mobile), light #f2fafd pill with #00388f text; mobile stacks the mobile photo above dark text and a filled #00388f pill.",
+    "purpose": "Advertise an AT&T offer (att.com) on the newsroom",
+    "description": "Centred offer banner with heading, description, legal line and outline button"
+  },
+  "contentPattern": {
+    "summary": "att.com multi-cta offer strip (data-comp=multi-cta-duc): h2 heading-xxl, p type-base, div type-legal with 'See offer details', btn-secondary CTA. Image banner: business.att.com hero-panel offer (eyebrow, h2, description, legal, CTA over a data-desktop / data-mobile background photo).",
+    "structure": "One cell: optional photo(s) (desktop, then mobile), optional eyebrow paragraph, heading, description paragraph, legal paragraph(s), link-only paragraph(s) as buttons"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "offer-banner"
+  ],
+  "usage": {
+    "description": "Offer fragments under /fragments/offers.",
+    "pagesUsing": [
+      "/fragments/offers/att-b2c-wireless-offer-2026",
+      "/fragments/offers/att-b2b-offer-2026"
+    ]
+  }
+}

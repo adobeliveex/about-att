@@ -1,0 +1,82 @@
+/* Accordion FAQ. Values measured from about.att.com story FAQ (.expand-collapse). */
+.accordion-faq {
+  margin: 0 0 40px;
+  font-family: var(--body-font-family);
+  color: var(--text-color);
+}
+
+.accordion-faq .accordion-faq-item-label {
+  position: relative;
+  padding: 10px 25px 10px 0;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.5;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-faq .accordion-faq-item-label::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-faq .accordion-faq-item-label:focus-visible {
+  outline: 2px solid var(--brand-blue);
+  outline-offset: 2px;
+}
+
+.accordion-faq .accordion-faq-item-body {
+  padding: 0 0 16px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.accordion-faq .accordion-faq-item-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion-faq .accordion-faq-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* option: divider-rows - thin rule above each question row (source: 1px #c9c9c9) */
+.accordion-faq.divider-rows .accordion-faq-item {
+  border-top: 1px solid #c9c9c9;
+}
+
+/* option: chevron - right-aligned chevron that flips when open */
+.accordion-faq.chevron .accordion-faq-item-label {
+  padding-right: 32px;
+}
+
+.accordion-faq.chevron .accordion-faq-item-label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  border: solid currentcolor;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-75%) rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.accordion-faq.chevron .accordion-faq-item[open] .accordion-faq-item-label::after {
+  transform: translateY(-25%) rotate(-135deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-faq.chevron .accordion-faq-item-label::after {
+    transition: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .accordion-faq .accordion-faq-item-label {
+    font-size: 21px;
+  }
+
+  .accordion-faq .accordion-faq-item-body {
+    font-size: 21px;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "variantName": "search-newsroom",
+  "baseBlock": "search",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "backgroundImage": null,
+    "stylingNotes": "Sub-band of visual-tree section rc6 (#page > div.SNR_section.section:nth-of-type(3)); two halves side by side: blue pill 'Subscribe to AT&T News' button left, outlined search input with magnifier right.",
+    "sectionSelector": "#page > div.SNR_section.section:nth-of-type(3) .region__wrap > div.SNR_column.section",
+    "purpose": "Inline newsroom search bar with a magnifier submit button",
+    "description": "Inline outlined search bar with magnifier icon, sits beside a CTA in a split section"
+  },
+  "contentPattern": {
+    "summary": "Interactive search input component.",
+    "structure": "one cell with a link to the search source (a query-index .json filters in place; any other URL is a results page submitted with ?q=) and the placeholder text as a separate paragraph. Key/value rows (source | url, placeholder | text) also work"
+  },
+  "options": [
+    {
+      "class": "inline-input",
+      "label": "Inline Input"
+    }
+  ],
+  "memberVariantIds": [
+    "search-newsroom"
+  ],
+  "usage": "Beside the Subscribe CTA in a split section on the home page.",
+  "reuseGuidance": "Use for any single-input site/newsroom search.",
+  "sourceUrl": "https://about.att.com/",
+  "sectionMetadata": {
+    "style": "split"
+  }
+}

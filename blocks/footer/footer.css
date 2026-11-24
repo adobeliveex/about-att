@@ -1,0 +1,79 @@
+/*
+ * Footer: AT&T Newsroom legal footer.
+ * Values measured from https://about.att.com/ (see migration-work/footer-validation/).
+ * Mobile-first: base = small screens, @media (min-width: 900px) = desktop.
+ */
+
+footer {
+  background-color: #191919;
+}
+
+footer .footer-wrap {
+  box-sizing: border-box;
+  width: min(var(--content-width), 100% - 2 * var(--content-gutter));
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #959595;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+/* inline row of legal links that wraps */
+footer .footer-links-list {
+  margin: 10px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+footer .footer-links-list > li {
+  display: inline-block;
+  margin: 0 16px 5px 0;
+  vertical-align: baseline;
+}
+
+footer .footer-links-list a:any-link {
+  color: #959595;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 11px;
+  text-decoration: none;
+}
+
+footer .footer-links-list a:hover,
+footer .footer-links-list a:focus-visible {
+  color: #959595;
+  text-decoration: underline;
+}
+
+footer .footer-links-list a:focus-visible {
+  outline: 1px solid #959595;
+  outline-offset: 2px;
+}
+
+/* CCPA "Your Privacy Choices" icon sits before its link */
+footer .footer-link-icon {
+  display: inline;
+  width: 32px;
+  height: 15px;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+footer .footer-legal {
+  padding-bottom: 20px;
+}
+
+footer .footer-legal p {
+  margin: 0;
+  color: #959595;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+@media (min-width: 900px) {
+  footer .footer-wrap {
+    padding: 20px 0 50px;
+  }
+}

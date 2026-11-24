@@ -1,0 +1,40 @@
+{
+  "variantName": "columns-stock-ticker",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#f2f2f2",
+    "backgroundImage": "gradient",
+    "stylingNotes": "Thin light-grey (subtle gradient) band; four items in one centered row: price, change, timestamp, 'View stock information' link.",
+    "sectionSelector": "#page > div.SNR_section.section:nth-of-type(2)",
+    "purpose": "Compact one-line stock ticker band: price, change, timestamp and a link to stock information",
+    "description": "Single compact centered row of four inline items: price, change, timestamp, arrow link"
+  },
+  "contentPattern": {
+    "summary": "Fixed set of four different items side by side in one row that never wraps into a grid (price, change, timestamp, link); values are live stock data that the block can refresh. Stat values stay as paragraphs, not headings.",
+    "structure": "one row with four cells: price (e.g. T: $21.85) | change (e.g. ↑ $+0.05) | timestamp | link (View stock information). Optional extra single-cell row with a link to a .json feed for the live-data option"
+  },
+  "options": [
+    {
+      "class": "four-cells",
+      "label": "Four Cells"
+    },
+    {
+      "class": "inline",
+      "label": "Inline"
+    },
+    {
+      "class": "live-data",
+      "label": "Live Data"
+    }
+  ],
+  "memberVariantIds": [
+    "columns-stock-ticker"
+  ],
+  "usage": "Thin band under the home hero showing the AT&T (T) quote.",
+  "reuseGuidance": "Use only for the stock ticker. For general side-by-side content use columns.",
+  "sourceUrl": "https://about.att.com/",
+  "sectionMetadata": {
+    "style": "light-grey-gradient"
+  }
+}

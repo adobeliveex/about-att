@@ -1,0 +1,27 @@
+{
+  "variantName": "quotes-text",
+  "baseBlock": "quote",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "stylingNotes": "Desktop: 817px row, 209px column holding a 189x149 AT&T blue quotation-mark image, quote text 607px at 21px/1.6. Mobile: 1728x785 crop of the mark full width above 18px text. 60px (desktop) / 40px (mobile) above and below.",
+    "purpose": "Pull quote with the blue quotation-mark graphic in a story body",
+    "description": "Quote mark image column beside the quotation text"
+  },
+  "contentPattern": {
+    "summary": "Source .article__content .SNR_column rows: col-3 banner image 'blue quotation marks' + col-9 text with the quote and bold attribution.",
+    "structure": "One row per quote, one cell of rich text (optional leading image cell replaces the mark)"
+  },
+  "options": [],
+  "memberVariantIds": ["quotes-text"],
+  "usage": {
+    "description": "Executive / partner quotes in newsroom stories.",
+    "pagesUsing": [
+      "/story/2026/att-amdocs-expand-collaboration",
+      "/story/2026/att-ast-spacemobile-engineering-connected-world",
+      "/story/2026/att-to-sell-att-mexico",
+      "/story/2026/forged-fiber-37-gigapower-joint-venture",
+      "/story/2026/screenready-advisory-board"
+    ]
+  }
+}

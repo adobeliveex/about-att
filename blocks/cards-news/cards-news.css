@@ -1,0 +1,177 @@
+/*
+ * cards-news: AT&T Newsroom "Latest news" story grid
+ * source: .featurestorymultifield .featured-stories (about.att.com)
+ */
+
+/* block sits 40px below the heading on mobile (source padding-top 20px + h2 margin 20px) */
+.cards-news {
+  padding-top: 20px;
+  color: var(--text-color);
+}
+
+.cards-news > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+
+.cards-news > ul > li {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-width: 0;
+}
+
+.cards-news > ul > li[hidden] {
+  display: none;
+}
+
+/* image: 768x575 source renditions, full card width */
+.cards-news .cards-news-card-image {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  background-color: #fff;
+}
+
+.cards-news .cards-news-card-image:hover {
+  filter: brightness(40%);
+  transition: 0.5s;
+}
+
+.cards-news .cards-news-card-image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s;
+}
+
+.cards-news .cards-news-card-image a:hover,
+.cards-news .cards-news-card-image a:focus {
+  opacity: 0.9;
+}
+
+/* EDS wraps the linked picture in a <p> */
+.cards-news .cards-news-card-image p {
+  margin: 0;
+}
+
+.cards-news .cards-news-card-image picture {
+  display: block;
+}
+
+.cards-news .cards-news-card-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 768 / 575;
+  object-fit: cover;
+}
+
+/* body */
+.cards-news .cards-news-card-body {
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.cards-news .cards-news-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-news .cards-news-card-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* "Aleck Sans Black" is a single heavy face; 700 keeps the Arial fallback bold */
+.cards-news .cards-news-card-body h3 {
+  margin: 0;
+  font-family: var(--heading-font-family-black);
+  font-size: 20px;
+  font-weight: 700;
+  font-synthesis: none;
+  line-height: 25px;
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.cards-news .cards-news-card-body h3 a:any-link {
+  color: inherit;
+}
+
+.cards-news .cards-news-card-body p {
+  margin: 10px 0 0;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23.2px;
+  color: var(--text-color);
+}
+
+/* source .item__cta: 20px above, 24px tall */
+.cards-news .cards-news-card-body p.cards-news-card-cta-container {
+  margin: 20px 0 0;
+  min-height: 24px;
+  line-height: 24px;
+}
+
+main .cards-news a.cards-news-card-cta:any-link {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 0;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+main .cards-news a.cards-news-card-cta:hover,
+main .cards-news a.cards-news-card-cta:focus {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+/* load-more: source "View More" is the cyan pill (.cta--button), 60px above */
+.cards-news .cards-news-load-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.cards-news .cards-news-load-more button.button {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  transition: var(--button-transition);
+}
+
+.cards-news .cards-news-load-more button.button:hover,
+.cards-news .cards-news-load-more button.button:focus-visible {
+  background-color: var(--brand-cyan-hover);
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  /* source: 3 x 33.33% columns, 20px gutters, 40px between rows, 60px below the heading */
+  .cards-news {
+    padding-top: 40px;
+  }
+
+  .cards-news > ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px 20px;
+  }
+}

@@ -1,0 +1,63 @@
+/*
+ * AT&T Newsroom brand tokens
+ * Extracted from https://about.att.com/ (computed styles), see migration-work/brand.json
+ * and migration-work/design-source-styles.json.
+ */
+:root {
+  /* fonts: Aleck Sans is AT&T's licensed typeface; Arial/Helvetica is the source's own fallback */
+  --body-font-family: "Aleck Sans", arial, helvetica, sans-serif;
+  --heading-font-family: "Aleck Sans", arial, helvetica, sans-serif;
+  --heading-font-family-black: "Aleck Sans Black", "Aleck Sans Medium", "Aleck Sans", arial, helvetica, sans-serif;
+
+  /* colors */
+  --background-color: #fff;
+  --text-color: #191919;
+  --link-color: #0568ae;
+  --link-hover-color: #0568ae;
+  --brand-cyan: #009fdb;
+  --brand-cyan-hover: #0090c7;
+  --brand-blue: #0568ae;
+  --light-grey: #f2f2f2;
+  --border-grey: #878c94;
+  --light-color: #f2f2f2;
+  --dark-color: #191919;
+
+  /* body type */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-line-height: 1.45;
+
+  /* heading sizes (desktop values applied at 900px+) */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* buttons */
+  --button-radius: 45px;
+  --button-padding: 15px 30px 17px;
+  --button-min-width: 150px;
+  --button-font-size: 16px;
+  --button-transition: 0.3s;
+
+  /* layout */
+  --content-max-width: 1600px; /* full-bleed banners */
+  --content-width: 1220px; /* text and grid content */
+  --content-gutter: 20px;
+  --section-spacing: 40px;
+  --nav-height: 73px; /* mobile: 72px bar + 1px bottom border */
+}
+
+@media (min-width: 900px) {
+  :root {
+    --heading-font-size-xxl: 40px;
+    --heading-font-size-xl: 30px;
+    --heading-font-size-l: 20px;
+    --heading-font-size-m: 16px;
+    --content-gutter: 6.7%;
+    --nav-height: 105px; /* desktop: 104px bar + 1px bottom border */
+    --section-spacing: 60px;
+  }
+}

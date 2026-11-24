@@ -1,0 +1,51 @@
+/*
+ * AT&T Newsroom fonts
+ *
+ * The source site uses AT&T's licensed "Aleck Sans" family (Regular 400, Light 300, Bold 700,
+ * plus "Aleck Sans Medium" and "Aleck Sans Black"), self-hosted on about.att.com.
+ * Those files are not publicly reachable and are not on Typekit or Google Fonts, so this
+ * project falls back to Arial/Helvetica (the same fallback the source declares) until the
+ * licensed font files are added to /fonts. When they are, declare them here, e.g.:
+ *
+ * @font-face {
+ *   font-family: "Aleck Sans";
+ *   src: url('../fonts/ATTAleckSans_W_Rg.woff2') format('woff2');
+ *   font-weight: 400;
+ *   font-style: normal;
+ *   font-display: swap;
+ * }
+ */
+
+/* metric-compatible local fallback so layout does not shift if Aleck Sans is unavailable */
+@font-face {
+  font-family: "Aleck Sans";
+  src: local("Aleck Sans"), local("ATTAleckSans-Regular"), local("Arial"), local("Helvetica");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aleck Sans";
+  src: local("Aleck Sans Bold"), local("ATTAleckSans-Bold"), local("Arial Bold"), local("Helvetica Bold");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* "Aleck Sans Black" (story headlines on the source) as weight 900; falls back to bold Arial/Helvetica */
+@font-face {
+  font-family: "Aleck Sans";
+  src: local("Aleck Sans Black"), local("ATTAleckSans-Black"), local("Arial Bold"), local("Helvetica Bold");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Aleck Sans";
+  src: local("Aleck Sans Light"), local("ATTAleckSans-Light"), local("Arial"), local("Helvetica");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

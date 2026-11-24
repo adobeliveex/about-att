@@ -1,0 +1,130 @@
+/* source: .SNR_Stock_Ticker .stock-ticker spans the full page width, so drop the section column limit */
+main > .section > .columns-stock-ticker-wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+/* source .stock-ticker__wrap: 20px padding, left-to-right grey gradient, centred row */
+.columns-stock-ticker {
+  box-sizing: border-box;
+  padding: 20px;
+  background-image: linear-gradient(to right, rgb(237 236 236) 0%, rgb(249 249 249) 100%);
+  color: #000;
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.columns-stock-ticker .columns-stock-ticker-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+
+  /* source items are inline-blocks; the collapsed whitespace between them is ~4px */
+  column-gap: 4px;
+}
+
+.columns-stock-ticker .columns-stock-ticker-row > div {
+  white-space: nowrap;
+}
+
+.columns-stock-ticker .columns-stock-ticker-row > div p {
+  display: inline;
+  margin: 0;
+}
+
+.columns-stock-ticker .columns-stock-ticker-row > div > p + p {
+  margin-left: 0.5em;
+}
+
+/* price: "T: $21.85" */
+.columns-stock-ticker .columns-stock-ticker-price {
+  margin: 0 0 10px;
+  font-family: "Aleck Sans Medium", var(--body-font-family);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* change: "↑ $+0.05" */
+.columns-stock-ticker .columns-stock-ticker-change {
+  margin: 0 10px 10px 15px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+/* timestamp drops to its own line on mobile (source display: block) */
+.columns-stock-ticker .columns-stock-ticker-timestamp {
+  flex-basis: 100%;
+  margin: 0 0 10px;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.columns-stock-ticker .columns-stock-ticker-link {
+  flex-basis: 100%;
+}
+
+/* source .cta--link: bold 15px brand blue with a " →" suffix */
+.columns-stock-ticker .columns-stock-ticker-link a:any-link {
+  color: var(--link-color);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  text-decoration: none;
+}
+
+.columns-stock-ticker .columns-stock-ticker-link a:any-link::after {
+  content: " →";
+  font-weight: 400;
+}
+
+.columns-stock-ticker .columns-stock-ticker-link a:hover,
+.columns-stock-ticker .columns-stock-ticker-link a:focus-visible {
+  text-decoration: underline;
+}
+
+.columns-stock-ticker.inline .columns-stock-ticker-row {
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 599px) {
+  .columns-stock-ticker.inline .columns-stock-ticker-row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 900px) {
+  /* one row: price | change | timestamp | link, each on the source's margins */
+
+  /* source line box is 28px (68px band minus 2 x 20px padding) */
+  .columns-stock-ticker .columns-stock-ticker-row {
+    flex-wrap: nowrap;
+    min-height: 28px;
+  }
+
+  .columns-stock-ticker .columns-stock-ticker-price {
+    margin: 0 15px 0 0;
+  }
+
+  .columns-stock-ticker .columns-stock-ticker-change {
+    margin: 0 10px 0 15px;
+  }
+
+  .columns-stock-ticker .columns-stock-ticker-timestamp {
+    position: relative;
+    top: -1px;
+    flex-basis: auto;
+    margin: 0 15px 0 0;
+  }
+
+  .columns-stock-ticker .columns-stock-ticker-link {
+    position: relative;
+    top: -3px;
+    flex-basis: auto;
+    margin: 0 0 0 15px;
+  }
+}

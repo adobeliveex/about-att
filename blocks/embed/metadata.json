@@ -1,0 +1,20 @@
+{
+  "variantName": "embed",
+  "baseBlock": "embed",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "stylingNotes": "16:9 video centred in a 650px column, as on about.att.com story pages.",
+    "purpose": "Embedded YouTube/Vimeo video or social post",
+    "description": "Lazy-loaded video embed from a link"
+  },
+  "contentPattern": {
+    "summary": "Source .media[data-type=video] components (YouTube iframe) become an embed block with the video link.",
+    "structure": "One cell: the video URL; optional placeholder image before it"
+  },
+  "options": [],
+  "memberVariantIds": ["embed"],
+  "usage": {
+    "description": "Videos inside newsroom story bodies.",
+    "pagesUsing": ["/story/2026/att-ast-spacemobile-engineering-connected-world"]
+  }
+}

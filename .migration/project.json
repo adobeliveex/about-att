@@ -1,0 +1,12 @@
+{
+  "type": "da",
+  "sites": {
+    "about-att": {
+      "previewOrg": "srm0233-adobe",
+      "previewSite": "about-att",
+      "contentHostUrl": "https://content.da.live/srm0233-adobe/about-att/",
+      "libraryUrl": "https://content.da.live/srm0233-adobe/about-att/docs/library/blocks.json",
+      "botProtected": true
+    }
+  }
+}

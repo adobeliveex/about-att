@@ -1,0 +1,24 @@
+/* Quote Plain: unadorned body-text quotation (no quote mark graphic, border or portrait). */
+.quote-plain .quote-plain-quote {
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family);
+  font-style: normal;
+  color: var(--text-color);
+}
+
+.quote-plain .quote-plain-quotation p {
+  margin: 0 0 16px;
+}
+
+.quote-plain .quote-plain-quotation p:last-child {
+  margin-bottom: 0;
+}
+
+.quote-plain .quote-plain-attribution {
+  font-style: normal;
+}
+
+.quote-plain .quote-plain-attribution-line {
+  margin: 8px 0 0;
+}

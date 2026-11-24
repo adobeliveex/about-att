@@ -1,0 +1,257 @@
+/*
+ * Offer Banner: values measured on att.com (multi-cta offer strip, Nov 2026).
+ * Panel #f2fafd, rounded 16px; heading 32px (48px desktop) bold black;
+ * description 16px (18px desktop) #1d2329; legal 11px (12px desktop) #454b52;
+ * outline pill CTA 48px high, 2px #00388f, 14px bold.
+ */
+.offer-banner {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 24px 24px 32px;
+  border-radius: 16px;
+  background-color: #f2fafd;
+  color: #1d2329;
+  text-align: center;
+}
+
+.offer-banner .offer-banner-content {
+  max-width: 1045px;
+  margin: 0 auto;
+}
+
+.offer-banner .offer-banner-heading {
+  margin: 0;
+  color: #000;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.offer-banner .offer-banner-heading sup {
+  padding-left: 2px;
+  font-size: 0.37em;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.offer-banner .offer-banner-description {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.offer-banner .offer-banner-legal {
+  margin: 16px 0 0;
+  color: #454b52;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.offer-banner .offer-banner-legal a:any-link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.offer-banner .offer-banner-ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.offer-banner a.offer-banner-cta:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 48px;
+  margin: 0;
+  padding: 0 32px;
+  border: 2px solid #00388f;
+  border-radius: 28px;
+  background-color: transparent;
+  box-shadow: none;
+  color: #00388f;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.offer-banner a.offer-banner-cta:hover,
+.offer-banner a.offer-banner-cta:focus-visible {
+  background-color: #00388f;
+  color: #fff;
+}
+
+.offer-banner a.offer-banner-cta:focus-visible {
+  outline: 2px solid #00388f;
+  outline-offset: 2px;
+}
+
+@media (min-width: 900px) {
+  .offer-banner {
+    padding: 32px 48px 48px;
+  }
+
+  .offer-banner .offer-banner-heading {
+    font-size: 48px;
+  }
+
+  .offer-banner .offer-banner-description {
+    font-size: 18px;
+  }
+
+  .offer-banner .offer-banner-legal {
+    font-size: 12px;
+  }
+
+  .offer-banner .offer-banner-ctas {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+
+/*
+ * Image banner (an image is authored): business.att.com hero offer (Nov 2026).
+ * Mobile: photo above, dark text on white, filled #00388f pill.
+ * Desktop: photo covers the rounded panel (500px min height), text block left
+ * (max 595px), white text, light #f2fafd pill. Eyebrow 22px / 26px desktop.
+ */
+.offer-banner.offer-banner-with-image {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background-color: #fff;
+  color: #1d2329;
+  text-align: start;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-media picture,
+.offer-banner.offer-banner-with-image .offer-banner-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-media picture.offer-banner-image-desktop {
+  display: none;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-content {
+  max-width: none;
+  margin: 0;
+  padding: 16px 16px 32px;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-eyebrow {
+  margin: 0 0 8px;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-heading {
+  margin: 8px 0 16px;
+  color: #1d2329;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-heading sup {
+  font-size: 0.6em;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-description {
+  margin: 0;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-legal {
+  margin: 16px 0 0;
+  color: #454b52;
+}
+
+.offer-banner.offer-banner-with-image .offer-banner-ctas {
+  align-items: flex-start;
+  margin-top: 24px;
+}
+
+.offer-banner.offer-banner-with-image a.offer-banner-cta:any-link {
+  border-color: #00388f;
+  background-color: #00388f;
+  color: #f2fafd;
+}
+
+.offer-banner.offer-banner-with-image a.offer-banner-cta:hover,
+.offer-banner.offer-banner-with-image a.offer-banner-cta:focus-visible {
+  border-color: #002a6b;
+  background-color: #002a6b;
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .offer-banner.offer-banner-with-image {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+    background-color: #1d2329;
+    color: #fff;
+  }
+
+  .offer-banner.offer-banner-with-image .offer-banner-media {
+    position: absolute;
+    inset: 0;
+  }
+
+  .offer-banner.offer-banner-with-image .offer-banner-media picture,
+  .offer-banner.offer-banner-with-image .offer-banner-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .offer-banner.offer-banner-with-image .offer-banner-media picture.offer-banner-image-desktop {
+    display: block;
+  }
+
+  .offer-banner.offer-banner-with-image .offer-banner-media picture.offer-banner-image-mobile {
+    display: none;
+  }
+
+  .offer-banner.offer-banner-with-image .offer-banner-content {
+    position: relative;
+    box-sizing: content-box;
+    max-width: 595px;
+    padding: 48px 32px 48px 64px;
+  }
+
+  .offer-banner.offer-banner-with-image .offer-banner-eyebrow {
+    font-size: 26px;
+  }
+
+  .offer-banner.offer-banner-with-image .offer-banner-heading,
+  .offer-banner.offer-banner-with-image .offer-banner-legal {
+    color: #fff;
+  }
+
+  .offer-banner.offer-banner-with-image .offer-banner-ctas {
+    justify-content: flex-start;
+  }
+
+  .offer-banner.offer-banner-with-image a.offer-banner-cta:any-link {
+    border-color: #f2fafd;
+    background-color: #f2fafd;
+    color: #00388f;
+  }
+
+  .offer-banner.offer-banner-with-image a.offer-banner-cta:hover,
+  .offer-banner.offer-banner-with-image a.offer-banner-cta:focus-visible {
+    border-color: #fff;
+    background-color: #fff;
+    color: #00388f;
+  }
+}

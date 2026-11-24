@@ -1,0 +1,49 @@
+{
+  "variantName": "cards-news",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#ffffff",
+    "backgroundImage": null,
+    "stylingNotes": "Sub-band of rc6. H2 'Latest news', 3-column grid of 6 story cards (image, h3 title, description, 'Learn more' text link), 'View More' load-more control (href #) and centered 'All news' pill button.",
+    "sectionSelector": "#page > div.SNR_section.section:nth-of-type(3) .region__wrap > div.text.section:nth-of-type(5), #page > div.SNR_section.section:nth-of-type(3) .region__wrap > sly.featurestorymultifield.section",
+    "purpose": "Grid of news story cards with image on top, title, description and a text Learn more link",
+    "description": "3-column story grid: top image, bold title, description, text 'Learn more' link; load more"
+  },
+  "contentPattern": {
+    "summary": "Look-alike story items in a wrapping 3-column grid; each links to a detail page and the list has a 'View More' load-more control, so it is a dynamic list -> Cards. 'View More' (href #) is behavior, not authored content.",
+    "structure": "one row per story: cell 1 image (optionally linked), cell 2 h3 title, description paragraph and a Learn more link. With load-more, cards are revealed six at a time behind a View More button"
+  },
+  "options": [
+    {
+      "class": "3-up",
+      "label": "3 Up"
+    },
+    {
+      "class": "image-top",
+      "label": "Image Top"
+    },
+    {
+      "class": "text-link-cta",
+      "label": "Text Link CTA"
+    },
+    {
+      "class": "load-more",
+      "label": "Load More"
+    }
+  ],
+  "memberVariantIds": [
+    "cards-news"
+  ],
+  "usage": {
+    "description": "Latest news listing on the home page (6+ stories).",
+    "pagesUsing": [
+      "/index",
+      "/story/2026/samsung-holiday"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-11T17:28:07.286Z"
+  },
+  "reuseGuidance": "Use for story/article teaser grids. Use the base cards for generic cards.",
+  "sourceUrl": "https://about.att.com/"
+}

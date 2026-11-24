@@ -1,0 +1,25 @@
+{
+  "variantName": "article-search",
+  "baseBlock": "article-search",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "background": "#fff",
+    "stylingNotes": "Light 28-30px title, newsroom search bar (50px, 8px radius, #686e74 border), cyan pill CTA; 260px left filter sidebar with collapsible groups and checkboxes; results: 14px date, 18-20px bold cyan title link, 14px description, 40px apart; cyan pill Previous/Next.",
+    "purpose": "Search and filter all newsroom articles",
+    "description": "Article search listing with metadata filters in a left sidebar"
+  },
+  "contentPattern": {
+    "summary": "Dynamic list of articles from the stories query index, filterable by category, tags, publish month, keywords and author.",
+    "structure": "Key/value rows, all optional: title, intro, link, placeholder, filters, page size, source"
+  },
+  "options": [],
+  "memberVariantIds": [
+    "article-search"
+  ],
+  "usage": {
+    "description": "All news / search results page; the homepage search box submits here with ?q=.",
+    "pagesUsing": [
+      "/allnews"
+    ]
+  }
+}
